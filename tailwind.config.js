@@ -6,6 +6,13 @@ export default {
   ],
   theme: {
     extend: {},
+    fontFamily: {
+      "raleway": ["Raleway", "sans-serif"],
+      "montserrat": ["Montserrat", "sans-serif"],
+      "merriweather": ["Merriweather", "sans-serif"],
+      "inter": ["Inter", "sans-serif"],
+
+    }
   },
   plugins: [require("daisyui")],
 }

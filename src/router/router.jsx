@@ -8,7 +8,7 @@ export const router = createBrowserRouter([
     children: [
       {
         path: "/",
-        element: <div>Hello Root!</div>,
+        element: <div className="text-5xl font-merriweather font-bold">Hello Root!</div>,
       },
       {
         path: "/about",
