@@ -3,10 +3,12 @@ import { useForm } from "react-hook-form";
 import { useNavigate } from "react-router-dom";
 import { AuthContext } from "../../Provider/ContextProvider";
 import { toast } from "react-toastify";
+import { FaGoogle } from "react-icons/fa";
+import { FaFacebook } from "react-icons/fa";
 
 const Login = () => {
   const navigate = useNavigate();
-  const { signIn } = useContext(AuthContext);
+  const { signIn, googleLogin, facebookLogin } = useContext(AuthContext);
   const [error, setError] = useState(null);
 
   const { register, handleSubmit, reset } = useForm();
@@ -23,12 +25,39 @@ const Login = () => {
           email: "",
           password: "",
         });
+        navigate("/");
       })
       .catch((error) => {
         console.log(error.code);
         setError("Password is Not matching");
+        toast.error("password is incorrect");
       });
   };
+
+  const handleGoogleLogIn = () => {
+    googleLogin()
+      // eslint-disable-next-line no-unused-vars
+      .then((result) => {
+        toast.success("Log in successfully.........");
+        navigate("/");
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+  };
+
+  const handleFacebookLogIn = () => {
+    facebookLogin()
+      // eslint-disable-next-line no-unused-vars
+      .then((result) => {
+        toast.success("Log in successfully.........");
+        navigate("/");
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+  };
+
   return (
     <div className="w-[30%] mx-auto mt-[100px] p-[60px] border rounded-lg">
       <h1 className="text-center text-[40px] font-montserrat font-medium mb-[40px]">
@@ -72,6 +101,20 @@ const Login = () => {
         >
           Register
         </span>
+      </div>
+      <div
+        onClick={handleGoogleLogIn}
+        className="mt-10 flex items-center bg-[#425CEC] text-white text-[18px] font-semibold font-merriweather cursor-pointer space-x-10 py-2 rounded-lg"
+      >
+        <FaGoogle size={24} className="ml-[70px]" />
+        <button>Continue With Google</button>
+      </div>
+      <div
+        onClick={handleFacebookLogIn}
+        className="mt-5 flex items-center bg-[#425CEC] text-white text-[18px] font-semibold font-merriweather cursor-pointer space-x-10 py-2 rounded-lg"
+      >
+        <FaFacebook size={24} className="ml-[70px]" />
+        <button>Continue With FaceBook</button>
       </div>
     </div>
   );
