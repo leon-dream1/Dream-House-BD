@@ -5,6 +5,8 @@ import Register from "../pages/Register/Register";
 import Login from "../pages/Login/Login";
 import PropertyDetails from "../components/PropertyDetails/PropertyDetails";
 import PageNotFound from "../pages/PageNotFound/PageNotFound";
+import ProtectedRoute from "../components/ProtectedRoute/ProtectedRoute";
+import UpdateProfile from "../components/UpdateProfile/UpdateProfile";
 
 export const router = createBrowserRouter([
   {
@@ -26,8 +28,20 @@ export const router = createBrowserRouter([
       },
       {
         path: "/property/:id",
-        element: <PropertyDetails />,
-        loader: () => fetch("/public/fakeData.json"),
+        element: (
+          <ProtectedRoute>
+            <PropertyDetails />
+          </ProtectedRoute>
+        ),
+        loader: () => fetch("/fakeData.json"),
+      },
+      {
+        path: "/updateProfile",
+        element: (
+          <ProtectedRoute>
+            <UpdateProfile />
+          </ProtectedRoute>
+        ),
       },
     ],
   },

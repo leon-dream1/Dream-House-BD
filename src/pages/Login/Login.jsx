@@ -1,6 +1,6 @@
 import { useContext, useState } from "react";
 import { useForm } from "react-hook-form";
-import { useNavigate } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 import { AuthContext } from "../../Provider/ContextProvider";
 import { toast } from "react-toastify";
 import { FaGoogle } from "react-icons/fa";
@@ -8,10 +8,12 @@ import { FaFacebook } from "react-icons/fa";
 
 const Login = () => {
   const navigate = useNavigate();
+  const location = useLocation();
   const { signIn, googleLogin, facebookLogin } = useContext(AuthContext);
   const [error, setError] = useState(null);
 
   const { register, handleSubmit, reset } = useForm();
+  console.log(location);
 
   const onSubmit = (data) => {
     setError("");
@@ -25,7 +27,7 @@ const Login = () => {
           email: "",
           password: "",
         });
-        navigate("/");
+        navigate(location.state ? location.state : '/');
       })
       .catch((error) => {
         console.log(error.code);
@@ -39,7 +41,7 @@ const Login = () => {
       // eslint-disable-next-line no-unused-vars
       .then((result) => {
         toast.success("Log in successfully.........");
-        navigate("/");
+        navigate(location.state ? location.state : '/');
       })
       .catch((err) => {
         console.log(err);
@@ -51,7 +53,7 @@ const Login = () => {
       // eslint-disable-next-line no-unused-vars
       .then((result) => {
         toast.success("Log in successfully.........");
-        navigate("/");
+        navigate(location.state ? location.state : '/');
       })
       .catch((err) => {
         console.log(err);

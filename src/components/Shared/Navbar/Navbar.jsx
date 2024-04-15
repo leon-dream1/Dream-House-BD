@@ -12,6 +12,7 @@ const Navbar = () => {
       // eslint-disable-next-line no-unused-vars
       .then((result) => {
         setUser("");
+      // setLoading(false)
       })
       .catch((error) => console.log(error));
   };

@@ -8,53 +8,70 @@ import {
   GoogleAuthProvider,
   FacebookAuthProvider,
 } from "firebase/auth";
-import { createContext, useState } from "react";
+import { createContext, useEffect, useState } from "react";
 import auth from "../Firebase/Firebase";
+import { toast } from "react-toastify";
 
 export const AuthContext = createContext(null);
 
 // eslint-disable-next-line react/prop-types
 const ContextProvider = ({ children }) => {
   const [user, setUser] = useState(null);
+  const [loading, setLoading] = useState(true);
 
   const createUser = (email, password) => {
+    setLoading(true);
     return createUserWithEmailAndPassword(auth, email, password);
   };
 
   const updateInfo = (displayName, photoURL) => {
+    setLoading(true);
     updateProfile(auth.currentUser, {
       displayName: displayName,
       photoURL: photoURL,
     })
-      .then(() => {})
+      .then(() => {
+        setLoading(false);
+        toast.success("Update is saved");
+      })
       .catch((error) => {
         console.log(error);
       });
   };
 
   const signIn = (email, password) => {
+    setLoading(true);
     return signInWithEmailAndPassword(auth, email, password);
   };
 
   const logOut = () => {
+    setLoading(true);
     return signOut(auth);
   };
 
   const googleProvider = new GoogleAuthProvider();
 
   const googleLogin = () => {
+    setLoading(true);
     return signInWithPopup(auth, googleProvider);
   };
   const facebookProvider = new FacebookAuthProvider();
   const facebookLogin = () => {
+    setLoading(true);
     return signInWithPopup(auth, facebookProvider);
   };
 
-  onAuthStateChanged(auth, (currentUser) => {
-    if (currentUser) {
-      setUser(currentUser);
-    }
-  });
+  useEffect(() => {
+    const unSubscribe = onAuthStateChanged(auth, (currentUser) => {
+      if (currentUser) {
+        setUser(currentUser);
+        setLoading(false);
+      }
+    });
+    return () => {
+      unSubscribe();
+    };
+  }, []);
 
   const ContextValue = {
     createUser,
@@ -65,6 +82,7 @@ const ContextProvider = ({ children }) => {
     logOut,
     googleLogin,
     facebookLogin,
+    loading,
   };
   console.log(user);
 

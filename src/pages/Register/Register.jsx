@@ -1,10 +1,13 @@
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import { useForm } from "react-hook-form";
 import { useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
 import { AuthContext } from "../../Provider/ContextProvider";
+import { FaEye, FaRegEyeSlash } from "react-icons/fa";
 
 const Register = () => {
+  const [showPassword, setShowPassword] = useState(false);
+  const [passwordType, setPasswordType] = useState("password");
   const navigate = useNavigate();
   const { createUser, updateInfo } = useContext(AuthContext);
 
@@ -21,8 +24,18 @@ const Register = () => {
       .then((result) => {
         toast.success("Your Registration is successful.........");
         updateInfo(name, photoURL);
+        navigate("/");
       })
       .catch((error) => console.log(error));
+  };
+
+  const handleRegEye = () => {
+    setShowPassword(true);
+    setPasswordType("text");
+  };
+  const handleEye = () => {
+    setShowPassword(false);
+    setPasswordType("password");
   };
   return (
     <div className="w-[30%] mx-auto mt-[100px] p-[60px] border rounded-lg">
@@ -56,9 +69,9 @@ const Register = () => {
             {...register("photoURL")}
           />
         </div>
-        <div>
+        <div className="flex space-x-2 items-center">
           <input
-            type="password"
+            type={passwordType}
             placeholder="Type Your Password"
             className="input input-bordered w-full"
             required
@@ -66,6 +79,11 @@ const Register = () => {
               pattern: /^(?=.*[A-Z])(?=.*[a-z]).{6,}$/,
             })}
           />
+          {!showPassword ? (
+            <FaRegEyeSlash onClick={handleRegEye} size={30} />
+          ) : (
+            <FaEye onClick={handleEye} size={30} />
+          )}
         </div>
         {errors.password ? (
           <span className="text-red-700">
