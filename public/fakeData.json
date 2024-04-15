@@ -1,120 +1,154 @@
 [
-    {
-      "id": 1,
-      "estate_title": "Luxury Beach Resort",
-      "segment_name": "Resorts",
-      "description": "Experience luxury at our beachfront resort, with ocean views and world-class amenities. Enjoy an infinity pool, private beach access, spa, and fine dining restaurants. Located on a Tropical Island, our resort offers 5000 sq ft accommodations for $500 per night.",
-      "price": "$500 per night",
-      "status": "rent",
-      "area": "5000 sq ft",
-      "location": "Tropical Island",
-      "facilities": ["Infinity pool", "Private beach access", "Spa", "Fine dining restaurants"],
-      "image": "https://i.ibb.co/541nR11/1.jpg",
-      "button_text": "View Property"
-    },
-    {
-      "id": 2,
-      "estate_title": "Cozy Mountain Lodge",
-      "segment_name": "Lodges",
-      "description": "Escape to tranquil mountains and enjoy cozy accommodations in our rustic lodge. Surrounded by breathtaking scenery, our lodge offers fireplace, hiking trails, hot tub, and game room. Located in a Mountain Range, our 2500 sq ft lodge is available for $200 per night.",
-      "price": "$200 per night",
-      "status": "rent",
-      "area": "2500 sq ft",
-      "location": "Mountain Range",
-      "facilities": ["Fireplace", "Hiking trails", "Hot tub", "Game room"],
-      "image": "https://i.ibb.co/rZRDHc2/2.jpg",
-      "button_text": "View Property"
-    },
-    {
-      "id": 3,
-      "estate_title": "Urban Boutique Hotel",
-      "segment_name": "Hotels",
-      "description": "Discover the vibrant city from our stylish boutique hotel, offering chic accommodations and personalized service. Enjoy rooftop bar, fitness center, concierge service, and meeting rooms. Located in Downtown Metropolis, our hotel provides 1500 sq ft rooms for $300 per night.",
-      "price": "$300 per night",
-      "status": "rent",
-      "area": "1500 sq ft",
-      "location": "Downtown Metropolis",
-      "facilities": ["Rooftop bar", "Fitness center", "Concierge service", "Meeting rooms"],
-      "image": "https://i.ibb.co/syndZ00/3.jpg",
-      "button_text": "View Property"
-    },
-    {
-      "id": 4,
-      "estate_title": "Quaint Countryside Inn",
-      "segment_name": "Guesthouses",
-      "description": "Experience the charm of rural life at our quaint countryside inn, offering cozy rooms and homemade breakfast. Enjoy garden, farm-to-table dining, pet-friendly rooms, and bicycle rentals. Located in Rolling Hills, our 2000 sq ft inn welcomes guests for $150 per night.",
-      "price": "$150 per night",
-      "status": "rent",
-      "area": "2000 sq ft",
-      "location": "Rolling Hills",
-      "facilities": ["Garden", "Farm-to-table dining", "Pet-friendly rooms", "Bicycle rentals"],
-      "image": "https://i.ibb.co/r0tfgPt/4.jpg",
-      "button_text": "View Property"
-    },
-    {
-      "id": 5,
-      "estate_title": "Seaside Motel",
-      "segment_name": "Motels",
-      "description": "Enjoy a comfortable stay by the sea at our charming motel, offering convenient access to nearby attractions. Features include free parking, outdoor seating area, Wi-Fi, and 24-hour front desk. Located in a Coastal Town, our 1200 sq ft motel rooms are available for $100 per night.",
-      "price": "$100 per night",
-      "status": "rent",
-      "area": "1200 sq ft",
-      "location": "Coastal Town",
-      "facilities": ["Free parking", "Outdoor seating area", "Wi-Fi", "24-hour front desk"],
-      "image": "https://i.ibb.co/8bjLgQv/5.jpg",
-      "button_text": "View Property"
-    },
-    {
-      "id": 6,
-      "estate_title": "Luxurious Ski Resort",
-      "segment_name": "Resorts",
-      "description": "Indulge in the ultimate winter getaway at our luxurious ski resort, offering ski-in/ski-out access and deluxe accommodations. Features include ski rental, hot cocoa bar, spa, and gourmet dining. Located in Alpine Mountains, our 4500 sq ft resort awaits guests for $600 per night.",
-      "price": "$600 per night",
-      "status": "rent",
-      "area": "4500 sq ft",
-      "location": "Alpine Mountains",
-      "facilities": ["Ski rental", "Hot cocoa bar", "Spa", "Gourmet dining"],
-      "image": "https://i.ibb.co/dtz66kC/6.jpg",
-      "button_text": "View Property"
-    },
-    {
-      "id": 7,
-      "estate_title": "Charming Vacation Rental",
-      "segment_name": "Vacation Rentals",
-      "description": "Escape to a home away from home at our charming vacation rental, nestled in a serene countryside setting. Enjoy outdoor BBQ area, private garden, fully equipped kitchen, and fire pit. Located in Rural Retreat, our 1800 sq ft rental is available for $250 per night.",
-      "price": "$250 per night",
-      "status": "rent",
-      "area": "1800 sq ft",
-      "location": "Rural Retreat",
-      "facilities": ["Outdoor BBQ area", "Private garden", "Fully equipped kitchen", "Fire pit"],
-      "image": "https://i.ibb.co/LPMjGxr/7.jpg",
-      "button_text": "View Property"
-    },
-    {
-      "id": 8,
-      "estate_title": "Riverside Lodge",
-      "segment_name": "Lodges",
-      "description": "Unwind by the river at our charming lodge, offering cozy accommodations and picturesque views of the water. Features include riverfront deck, fishing gear rental, campfire area, and picnic tables. Located in River Valley, our 2100 sq ft lodge awaits guests for $180 per night.",
-      "price": "$180 per night",
-      "status": "rent",
-      "area": "2100 sq ft",
-      "location": "River Valley",
-      "facilities": ["Riverfront deck", "Fishing gear rental", "Campfire area", "Picnic tables"],
-      "image": "https://i.ibb.co/n3XSfWv/8.jpg",
-      "button_text": "View Property"
-    },
-    {
-      "id": 9,
-      "estate_title": "Historic Bed and Breakfast",
-      "segment_name": "Guesthouses",
-      "description": "Step back in time at our historic bed and breakfast, offering elegant rooms and warm hospitality in a restored mansion. Features include antique furnishings, complimentary breakfast, cozy sitting areas, and gardens. Located in Old Town District, our 3000 sq ft B&B welcomes guests for $180 per night.",
-      "price": "$180 per night",
-      "status": "rent",
-      "area": "3000 sq ft",
-      "location": "Old Town District",
-      "facilities": ["Antique furnishings", "Complimentary breakfast", "Cozy sitting areas", "Gardens"],
-      "image": "https://i.ibb.co/2KVKZjx/9.jpg",
-      "button_text": "View Property"
-    }
-  ]
-  
+  {
+    "id": 1,
+    "estate_title": "Luxury Beach Resort",
+    "segment_name": "Resorts",
+    "description": "Experience unparalleled luxury and serenity at our exquisite beachfront resort, where every moment is infused with the tranquility of the ocean waves and the opulence of world-class amenities. Situated on a pristine Tropical Island, our resort stands as a beacon of refined elegance amidst nature's breathtaking beauty. Indulge in the lavish comforts of our 5000 square feet accommodations, meticulously designed to provide a seamless blend of sophistication and comfort. ",
+    "price": "$500 per night",
+    "status": "rent",
+    "area": "5000 sq ft",
+    "location": "Tropical Island",
+    "facilities": [
+      "Infinity pool",
+      "Private beach access",
+      "Spa",
+      "Fine dining restaurants"
+    ],
+    "image": "https://i.ibb.co/541nR11/1.jpg",
+    "button_text": "View Property"
+  },
+  {
+    "id": 2,
+    "estate_title": "Cozy Mountain Lodge",
+    "segment_name": "Lodges",
+    "description": "Escape to tranquil mountains and enjoy cozy accommodations in our rustic lodge. Surrounded by breathtaking scenery, our lodge offers fireplace, hiking trails, hot tub, and game room. Located in a Mountain Range, our 2500 sq ft lodge is available for $200 per night.",
+    "price": "$200 per night",
+    "status": "sell",
+    "area": "2500 sq ft",
+    "location": "Mountain Range",
+    "facilities": ["Fireplace", "Hiking trails", "Hot tub", "Game room"],
+    "image": "https://i.ibb.co/rZRDHc2/2.jpg",
+    "button_text": "View Property"
+  },
+  {
+    "id": 3,
+    "estate_title": "Urban Boutique Hotel",
+    "segment_name": "Hotels",
+    "description": "Discover the vibrant city from our stylish boutique hotel, offering chic accommodations and personalized service. Enjoy rooftop bar, fitness center, concierge service, and meeting rooms. Located in Downtown Metropolis, our hotel provides 1500 sq ft rooms for $300 per night.",
+    "price": "$300 per night",
+    "status": "rent",
+    "area": "1500 sq ft",
+    "location": "Downtown Metropolis",
+    "facilities": [
+      "Rooftop bar",
+      "Fitness center",
+      "Concierge service",
+      "Meeting rooms"
+    ],
+    "image": "https://i.ibb.co/syndZ00/3.jpg",
+    "button_text": "View Property"
+  },
+  {
+    "id": 4,
+    "estate_title": "Quaint Countryside Inn",
+    "segment_name": "Guesthouses",
+    "description": "Experience the charm of rural life at our quaint countryside inn, offering cozy rooms and homemade breakfast. Enjoy garden, farm-to-table dining, pet-friendly rooms, and bicycle rentals. Located in Rolling Hills, our 2000 sq ft inn welcomes guests for $150 per night.",
+    "price": "$150 per night",
+    "status": "rent",
+    "area": "2000 sq ft",
+    "location": "Rolling Hills",
+    "facilities": [
+      "Garden",
+      "Farm-to-table dining",
+      "Pet-friendly rooms",
+      "Bicycle rentals"
+    ],
+    "image": "https://i.ibb.co/r0tfgPt/4.jpg",
+    "button_text": "View Property"
+  },
+  {
+    "id": 5,
+    "estate_title": "Seaside Motel",
+    "segment_name": "Motels",
+    "description": "Enjoy a comfortable stay by the sea at our charming motel, offering convenient access to nearby attractions. Features include free parking, outdoor seating area, Wi-Fi, and 24-hour front desk. Located in a Coastal Town, our 1200 sq ft motel rooms are available for $100 per night.",
+    "price": "$100 per night",
+    "status": "sell",
+    "area": "1200 sq ft",
+    "location": "Coastal Town",
+    "facilities": [
+      "Free parking",
+      "Outdoor seating area",
+      "Wi-Fi",
+      "24-hour front desk"
+    ],
+    "image": "https://i.ibb.co/8bjLgQv/5.jpg",
+    "button_text": "View Property"
+  },
+  {
+    "id": 6,
+    "estate_title": "Luxurious Ski Resort",
+    "segment_name": "Resorts",
+    "description": "Indulge in the ultimate winter getaway at our luxurious ski resort, offering ski-in/ski-out access and deluxe accommodations. Features include ski rental, hot cocoa bar, spa, and gourmet dining. Located in Alpine Mountains, our 4500 sq ft resort awaits guests for $600 per night.",
+    "price": "$600 per night",
+    "status": "rent",
+    "area": "4500 sq ft",
+    "location": "Alpine Mountains",
+    "facilities": ["Ski rental", "Hot cocoa bar", "Spa", "Gourmet dining"],
+    "image": "https://i.ibb.co/dtz66kC/6.jpg",
+    "button_text": "View Property"
+  },
+  {
+    "id": 7,
+    "estate_title": "Charming Vacation Rental",
+    "segment_name": "Vacation Rentals",
+    "description": "Escape to a home away from home at our charming vacation rental, nestled in a serene countryside setting. Enjoy outdoor BBQ area, private garden, fully equipped kitchen, and fire pit. Located in Rural Retreat, our 1800 sq ft rental is available for $250 per night.",
+    "price": "$250 per night",
+    "status": "rent",
+    "area": "1800 sq ft",
+    "location": "Rural Retreat",
+    "facilities": [
+      "Outdoor BBQ area",
+      "Private garden",
+      "Fully equipped kitchen",
+      "Fire pit"
+    ],
+    "image": "https://i.ibb.co/LPMjGxr/7.jpg",
+    "button_text": "View Property"
+  },
+  {
+    "id": 8,
+    "estate_title": "Riverside Lodge",
+    "segment_name": "Lodges",
+    "description": "Unwind by the river at our charming lodge, offering cozy accommodations and picturesque views of the water. Features include riverfront deck, fishing gear rental, campfire area, and picnic tables. Located in River Valley, our 2100 sq ft lodge awaits guests for $180 per night.",
+    "price": "$180 per night",
+    "status": "rent",
+    "area": "2100 sq ft",
+    "location": "River Valley",
+    "facilities": [
+      "Riverfront deck",
+      "Fishing gear rental",
+      "Campfire area",
+      "Picnic tables"
+    ],
+    "image": "https://i.ibb.co/n3XSfWv/8.jpg",
+    "button_text": "View Property"
+  },
+  {
+    "id": 9,
+    "estate_title": "Historic Bed and Breakfast",
+    "segment_name": "Guesthouses",
+    "description": "Step back in time at our historic bed and breakfast, offering elegant rooms and warm hospitality in a restored mansion. Features include antique furnishings, complimentary breakfast, cozy sitting areas, and gardens. Located in Old Town District, our 3000 sq ft B&B welcomes guests for $180 per night.",
+    "price": "$180 per night",
+    "status": "rent",
+    "area": "3000 sq ft",
+    "location": "Old Town District",
+    "facilities": [
+      "Antique furnishings",
+      "Complimentary breakfast",
+      "Cozy sitting areas",
+      "Gardens"
+    ],
+    "image": "https://i.ibb.co/2KVKZjx/9.jpg",
+    "button_text": "View Property"
+  }
+]
