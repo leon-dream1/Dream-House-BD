@@ -73,7 +73,7 @@ const Navbar = () => {
               </NavLink>
             </ul>
           </div>
-          <button className="text-[22px] font-merriweather text-[#131313] font-extrabold">
+          <button onClick={() => navigate('/')} className="text-[22px] font-merriweather text-[#131313] font-extrabold">
             DreamHouse
           </button>
         </div>
