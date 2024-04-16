@@ -18,14 +18,15 @@ export const AuthContext = createContext(null);
 const ContextProvider = ({ children }) => {
   const [user, setUser] = useState(null);
   const [loading, setLoading] = useState(true);
+  
 
   const createUser = (email, password) => {
-    setLoading(true);
+    // setLoading(true);
     return createUserWithEmailAndPassword(auth, email, password);
   };
 
   const updateInfo = (displayName, photoURL) => {
-    setLoading(true);
+    // setLoading(true);
     return updateProfile(auth.currentUser, {
       displayName: displayName,
       photoURL: photoURL,
@@ -33,29 +34,28 @@ const ContextProvider = ({ children }) => {
   };
 
   const signIn = (email, password) => {
-    setLoading(true);
+    // setLoading(true);
     return signInWithEmailAndPassword(auth, email, password);
   };
 
   const logOut = () => {
-    setLoading(true);
+    // setLoading(true);
     return signOut(auth);
   };
 
   const googleProvider = new GoogleAuthProvider();
 
   const googleLogin = () => {
-    setLoading(true);
+    // setLoading(true);
     return signInWithPopup(auth, googleProvider);
   };
   const facebookProvider = new FacebookAuthProvider();
   const facebookLogin = () => {
-    setLoading(true);
+    // setLoading(true);
     return signInWithPopup(auth, facebookProvider);
   };
 
   useEffect(() => {
-    // setLoading(false);
     const unSubscribe = onAuthStateChanged(auth, (currentUser) => {
       if (currentUser) {
         setUser(currentUser);

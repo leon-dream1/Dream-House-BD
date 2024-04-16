@@ -12,12 +12,12 @@ const ProtectedRoute = ({ children }) => {
   console.log("loading", loading);
 
   if (loading) {
-    <FadeLoader color="#36d7b7" className="mx-auto mt-[50px]" />;
+    return <FadeLoader color="#36d7b7" className="mx-auto mt-[50px]" />;
   }
   if (user) {
     return children;
   }
-  return <Navigate to={"/login"} state={location.pathname}></Navigate>;
+  return <Navigate to="/login" state={location.pathname}></Navigate>;
 };
 
 export default ProtectedRoute;
