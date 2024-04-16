@@ -4,6 +4,7 @@ import { useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
 import { AuthContext } from "../../Provider/ContextProvider";
 import { FaEye, FaRegEyeSlash } from "react-icons/fa";
+import { Helmet } from "react-helmet";
 
 const Register = () => {
   const [showPassword, setShowPassword] = useState(false);
@@ -23,10 +24,18 @@ const Register = () => {
       // eslint-disable-next-line no-unused-vars
       .then((result) => {
         toast.success("Your Registration is successful.........");
-        updateInfo(name, photoURL);
-        navigate("/");
+        updateInfo(name, photoURL)
+          .then(() => {
+            toast.success("Update is saved");
+            navigate("/");
+          })
+          .catch((error) => {
+            console.log(error);
+          });
       })
-      .catch((error) => console.log(error));
+      .catch((error) => {
+        toast.error(error.message);
+      });
   };
 
   const handleRegEye = () => {
@@ -39,6 +48,9 @@ const Register = () => {
   };
   return (
     <div className="w-[30%] mx-auto mt-[100px] p-[60px] border rounded-lg">
+      <Helmet>
+        <title>Register</title>
+      </Helmet>
       <h1 className="text-center text-[40px] font-montserrat font-medium mb-[40px]">
         Register Here
       </h1>

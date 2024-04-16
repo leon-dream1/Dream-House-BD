@@ -13,7 +13,6 @@ const ProtectedRoute = ({ children }) => {
 
   if (loading) {
     <FadeLoader color="#36d7b7" className="mx-auto mt-[50px]" />;
-    return;
   }
   if (user) {
     return children;

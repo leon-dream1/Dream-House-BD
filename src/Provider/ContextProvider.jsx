@@ -25,17 +25,11 @@ const ContextProvider = ({ children }) => {
   };
 
   const updateInfo = (displayName, photoURL) => {
-    updateProfile(auth.currentUser, {
+    setLoading(true);
+    return updateProfile(auth.currentUser, {
       displayName: displayName,
       photoURL: photoURL,
-    })
-      .then(() => {
-        setLoading(false);
-        toast.success("Update is saved");
-      })
-      .catch((error) => {
-        console.log(error);
-      });
+    });
   };
 
   const signIn = (email, password) => {
@@ -61,7 +55,7 @@ const ContextProvider = ({ children }) => {
   };
 
   useEffect(() => {
-    setLoading(false);
+    // setLoading(false);
     const unSubscribe = onAuthStateChanged(auth, (currentUser) => {
       if (currentUser) {
         setUser(currentUser);

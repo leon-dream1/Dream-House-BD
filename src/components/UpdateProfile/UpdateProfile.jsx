@@ -1,9 +1,13 @@
 import { useContext } from "react";
 import { AuthContext } from "../../Provider/ContextProvider";
 import { useForm } from "react-hook-form";
+import { Helmet } from "react-helmet";
+import { toast } from "react-toastify";
+import { useNavigate } from "react-router-dom";
 
 const UpdateProfile = () => {
   const { user, updateInfo } = useContext(AuthContext);
+  const navigate = useNavigate();
 
   const {
     register,
@@ -13,11 +17,21 @@ const UpdateProfile = () => {
 
   const onSubmit = (data) => {
     console.log(data);
-    updateInfo(data.name, data.photoURL);
+    updateInfo(data.name, data.photoURL)
+      .then(() => {
+        toast.success("Update is saved");
+        navigate('/')
+      })
+      .catch((error) => {
+        console.log(error);
+      });
   };
   console.log(user);
   return (
     <div className="container mx-auto mt-[100px] w-[50%] p-[60px] border rounded-lg">
+      <Helmet>
+        <title>Update Profile</title>
+      </Helmet>
       <h2 className="text-[40px] text-center text-blue-600 font-merriweather mb-6">
         Welcome,{user.displayName}
       </h2>

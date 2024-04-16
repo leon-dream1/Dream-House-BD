@@ -5,6 +5,8 @@ import { AuthContext } from "../../Provider/ContextProvider";
 import { toast } from "react-toastify";
 import { FaGoogle } from "react-icons/fa";
 import { FaFacebook } from "react-icons/fa";
+import {Helmet} from "react-helmet";
+
 
 const Login = () => {
   const navigate = useNavigate();
@@ -62,6 +64,9 @@ const Login = () => {
 
   return (
     <div className="w-[30%] mx-auto mt-[100px] p-[60px] border rounded-lg">
+      <Helmet>
+        <title>Login</title>
+      </Helmet>
       <h1 className="text-center text-[40px] font-montserrat font-medium mb-[40px]">
         Login Here
       </h1>

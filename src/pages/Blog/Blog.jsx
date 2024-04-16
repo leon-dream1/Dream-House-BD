@@ -1,3 +1,4 @@
+import { Helmet } from "react-helmet";
 import { useLoaderData } from "react-router-dom";
 
 const Blog = () => {
@@ -5,6 +6,9 @@ const Blog = () => {
 
   return (
     <div>
+        <Helmet>
+            <title>Blog</title>
+        </Helmet>
       <h1 className="text-[25px] text-center font-merriweather font-semibold mt-[50px]">
         Recent Blog
       </h1>
@@ -31,7 +35,7 @@ const Blog = () => {
               <p>{blogData[0].description}</p>
             </div>
           </a>
-          <div className="grid justify-center grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
+          <div className="grid justify-center grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3 animate__animated animate__fadeInUpBig">
             {blogData.slice(1).map((blog) => (
               <a
                 key={blog.id}

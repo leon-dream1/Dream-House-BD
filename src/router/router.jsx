@@ -8,6 +8,7 @@ import PageNotFound from "../pages/PageNotFound/PageNotFound";
 import ProtectedRoute from "../components/ProtectedRoute/ProtectedRoute";
 import UpdateProfile from "../components/UpdateProfile/UpdateProfile";
 import Blog from "../pages/Blog/Blog";
+import Map from "../components/Map/Map";
 
 export const router = createBrowserRouter([
   {
@@ -52,6 +53,14 @@ export const router = createBrowserRouter([
           </ProtectedRoute>
         ),
         loader: () => fetch("/blogData.json"),
+      },
+      {
+        path: "/location",
+        element: (
+          <ProtectedRoute>
+            <Map />
+          </ProtectedRoute>
+        ),
       },
     ],
   },

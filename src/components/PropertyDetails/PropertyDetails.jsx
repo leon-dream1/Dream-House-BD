@@ -1,3 +1,4 @@
+import { Helmet } from "react-helmet";
 import { useLoaderData, useParams } from "react-router-dom";
 
 const PropertyDetails = () => {
@@ -10,6 +11,9 @@ const PropertyDetails = () => {
   console.log("selected", selectedProperty);
   return (
     <div className="container mx-auto mt-[100px]">
+      <Helmet>
+        <title>Property Details of id {id}</title>
+      </Helmet>
       <div className="grid grid-cols-2 gap-6 items-center">
         <div>
           <img src={selectedProperty.image} alt="" className="rounded-lg" />

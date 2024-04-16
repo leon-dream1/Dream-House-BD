@@ -1,18 +1,18 @@
 import { useContext } from "react";
 import { NavLink, useNavigate } from "react-router-dom";
 import { AuthContext } from "../../../Provider/ContextProvider";
+import userIcon from "../../../assets/images/user.png";
 
 const Navbar = () => {
   const navigate = useNavigate(null);
 
-  const { user, logOut, setUser, setLoading } = useContext(AuthContext);
+  const { user, logOut, setUser } = useContext(AuthContext);
 
   const handleLogout = () => {
     logOut()
       // eslint-disable-next-line no-unused-vars
       .then((result) => {
         setUser("");
-       setLoading(true)
       })
       .catch((error) => console.log(error));
   };
@@ -74,7 +74,10 @@ const Navbar = () => {
               </NavLink>
             </ul>
           </div>
-          <button onClick={() => navigate('/')} className="text-[22px] font-merriweather text-[#131313] font-extrabold">
+          <button
+            onClick={() => navigate("/")}
+            className="text-[22px] font-merriweather text-[#131313] font-extrabold"
+          >
             DreamHouse
           </button>
         </div>
@@ -116,6 +119,16 @@ const Navbar = () => {
                   ? "text-green-700 font-extrabold text-[18px] font-merriweather"
                   : "text-[18px] font-merriweather font-semibold text-[#131313]"
               }
+              to={"/location"}
+            >
+              Location
+            </NavLink>
+            <NavLink
+              className={({ isActive }) =>
+                isActive
+                  ? "text-green-700 font-extrabold text-[18px] font-merriweather"
+                  : "text-[18px] font-merriweather font-semibold text-[#131313]"
+              }
               to={"/register"}
             >
               Register
@@ -135,11 +148,7 @@ const Navbar = () => {
                     <div className="w-10 rounded-full" title={user.displayName}>
                       <img
                         alt="Tailwind CSS Navbar component"
-                        src={
-                          user.photoURL
-                            ? user.photoURL
-                            : "https://daisyui.com/images/stock/photo-1534528741775-53994a69daeb.jpg"
-                        }
+                        src={user.photoURL ? user.photoURL : { userIcon }}
                       />
                     </div>
                   </div>

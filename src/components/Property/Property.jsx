@@ -1,4 +1,5 @@
 import { useNavigate } from "react-router-dom";
+import 'animate.css';
 
 // eslint-disable-next-line react/prop-types
 const Property = ({ property }) => {
@@ -29,7 +30,7 @@ const Property = ({ property }) => {
     button_text,
   } = property;
   return (
-    <div className="card bg-base-100 shadow-xl">
+    <div className="card bg-base-100 shadow-xl animate__animated animate__fadeInLeftBig animate__fast">
       <figure>
         <img src={image} alt={estate_title} />
       </figure>
