@@ -25,7 +25,6 @@ const ContextProvider = ({ children }) => {
   };
 
   const updateInfo = (displayName, photoURL) => {
-    setLoading(true);
     updateProfile(auth.currentUser, {
       displayName: displayName,
       photoURL: photoURL,
@@ -62,6 +61,7 @@ const ContextProvider = ({ children }) => {
   };
 
   useEffect(() => {
+    setLoading(false);
     const unSubscribe = onAuthStateChanged(auth, (currentUser) => {
       if (currentUser) {
         setUser(currentUser);
@@ -83,6 +83,7 @@ const ContextProvider = ({ children }) => {
     googleLogin,
     facebookLogin,
     loading,
+    setLoading,
   };
   console.log(user);
 

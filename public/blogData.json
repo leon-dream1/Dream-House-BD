@@ -1,0 +1,96 @@
+[
+  {
+    "id": 1,
+    "title": "Top 10 Tips for Buying Your First Home",
+    "category": "Real Estate",
+    "author": "John Smith",
+    "date": "2024-04-16",
+    "description": "Discover essential tips for first-time homebuyers to navigate the real estate market and make informed decisions.",
+    "tags": ["home buying", "first-time buyers", "real estate tips"],
+
+    "image": "https://i.ibb.co/dmDcmTJ/download.jpg"
+  },
+  {
+    "id": 2,
+    "title": "Luxury Resort Getaways: Finding Your Perfect Escape",
+    "category": "Resorts",
+    "author": "Jane Doe",
+    "date": "2024-04-15",
+    "description": "Embark on a journey to luxurious resort destinations and indulge in ultimate relaxation and rejuvenation.",
+    "tags": ["luxury travel", "resort destinations", "vacation planning"],
+    "image": "https://i.ibb.co/XjpMGVQ/download-1.jpg"
+  },
+  {
+    "id": 3,
+    "title": "The Rise of Vacation Rentals: A New Trend in Travel",
+    "category": "Vacation Rentals",
+    "author": "Emily Johnson",
+    "date": "2024-04-14",
+    "description": "Explore the growing popularity of vacation rentals and uncover unique accommodations for your next getaway.",
+    "tags": ["short-term rentals", "Airbnb", "vacation homes"],
+
+    "image": "https://i.ibb.co/sRfYY47/download-2.jpg"
+  },
+  {
+    "id": 4,
+    "title": "Exploring the Charm of Historic Guesthouses",
+    "category": "Guesthouses",
+    "author": "Michael Brown",
+    "date": "2024-04-13",
+    "description": "Immerse yourself in the charm and history of guesthouses for a unique travel experience filled with hospitality.",
+    "tags": [
+      "bed and breakfast",
+      "historic accommodations",
+      "travel experiences"
+    ],
+
+    "image": "https://i.ibb.co/PgJvpgR/download-3.jpg"
+  },
+  {
+    "id": 5,
+    "title": "Tips for Running a Successful Motel Business",
+    "category": "Motels",
+    "author": "Sarah Adams",
+    "date": "2024-04-12",
+    "description": "Learn key strategies and best practices for managing and growing your motel business in the hospitality industry.",
+    "tags": ["hospitality industry", "motel management", "customer service"],
+
+    "image": "https://i.ibb.co/mNRWC3W/download-4.jpg"
+  },
+  {
+    "id": 6,
+    "title": "10 Things to Consider Before Investing in Rental Properties",
+    "category": "Real Estate",
+    "author": "David Johnson",
+    "date": "2024-04-11",
+    "description": "Evaluate important factors and considerations before making investment decisions in rental properties.",
+    "tags": [
+      "real estate investment",
+      "rental property",
+      "investment strategies"
+    ],
+
+    "image": "https://i.ibb.co/h71r8s2/download-5.jpg"
+  },
+  {
+    "id": 7,
+    "title": "Choosing the Right Vacation Rental for Your Family Holiday",
+    "category": "Vacation Rentals",
+    "author": "Emma Wilson",
+    "date": "2024-04-10",
+    "description": "Find the perfect vacation rental that meets the needs and preferences of your family for a memorable holiday.",
+    "tags": ["family travel", "vacation planning", "holiday rentals"],
+
+    "image": "https://i.ibb.co/dL77dGK/download-6.jpg"
+  },
+  {
+    "id": 8,
+    "title": "The Future of Hospitality: Trends Shaping the Hotel Industry",
+    "category": "Hotels",
+    "author": "James Smith",
+    "date": "2024-04-09",
+    "description": "Explore emerging trends and innovations reshaping the hospitality landscape and enhancing guest experiences.",
+    "tags": ["hospitality trends", "hotel technology", "guest experience"],
+    "image": "https://i.ibb.co/xHC2c5t/download-7.jpg"
+  }
+]

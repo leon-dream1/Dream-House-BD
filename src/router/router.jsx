@@ -7,6 +7,7 @@ import PropertyDetails from "../components/PropertyDetails/PropertyDetails";
 import PageNotFound from "../pages/PageNotFound/PageNotFound";
 import ProtectedRoute from "../components/ProtectedRoute/ProtectedRoute";
 import UpdateProfile from "../components/UpdateProfile/UpdateProfile";
+import Blog from "../pages/Blog/Blog";
 
 export const router = createBrowserRouter([
   {
@@ -42,6 +43,15 @@ export const router = createBrowserRouter([
             <UpdateProfile />
           </ProtectedRoute>
         ),
+      },
+      {
+        path: "/blog",
+        element: (
+          <ProtectedRoute>
+            <Blog />
+          </ProtectedRoute>
+        ),
+        loader: () => fetch("/blogData.json"),
       },
     ],
   },

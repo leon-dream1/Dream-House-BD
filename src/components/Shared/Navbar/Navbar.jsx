@@ -5,14 +5,14 @@ import { AuthContext } from "../../../Provider/ContextProvider";
 const Navbar = () => {
   const navigate = useNavigate(null);
 
-  const { user, logOut, setUser } = useContext(AuthContext);
+  const { user, logOut, setUser, setLoading } = useContext(AuthContext);
 
   const handleLogout = () => {
     logOut()
       // eslint-disable-next-line no-unused-vars
       .then((result) => {
         setUser("");
-      // setLoading(false)
+       setLoading(true)
       })
       .catch((error) => console.log(error));
   };
@@ -99,6 +99,16 @@ const Navbar = () => {
               to={"/updateProfile"}
             >
               Update Profile
+            </NavLink>
+            <NavLink
+              className={({ isActive }) =>
+                isActive
+                  ? "text-green-700 font-extrabold text-[18px] font-merriweather"
+                  : "text-[18px] font-merriweather font-semibold text-[#131313]"
+              }
+              to={"/blog"}
+            >
+              Blog
             </NavLink>
             <NavLink
               className={({ isActive }) =>

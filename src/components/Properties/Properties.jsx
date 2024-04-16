@@ -5,7 +5,7 @@ const Properties = () => {
   const [properties, setProperties] = useState([]);
 
   useEffect(() => {
-    fetch("/public/fakeData.json")
+    fetch("/fakeData.json")
       .then((res) => res.json())
       .then((data) => setProperties(data));
   }, []);
