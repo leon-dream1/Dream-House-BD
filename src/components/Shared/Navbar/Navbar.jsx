@@ -40,7 +40,7 @@ const Navbar = () => {
             </div>
             <ul
               tabIndex={0}
-              className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52 space-x-6"
+              className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52 space-y-4 lg::space-y-0 space-x-0 lg:space-x-6"
             >
               <NavLink
                 className={({ isActive }) =>
@@ -68,6 +68,26 @@ const Navbar = () => {
                     ? "text-green-700 font-extrabold text-[18px] font-merriweather"
                     : "text-[18px] font-merriweather font-semibold text-[#131313]"
                 }
+                to={"/blog"}
+              >
+                Blog
+              </NavLink>
+              <NavLink
+                className={({ isActive }) =>
+                  isActive
+                    ? "text-green-700 font-extrabold text-[18px] font-merriweather"
+                    : "text-[18px] font-merriweather font-semibold text-[#131313]"
+                }
+                to={"/location"}
+              >
+                Location
+              </NavLink>
+              <NavLink
+                className={({ isActive }) =>
+                  isActive
+                    ? "text-green-700 font-extrabold text-[18px] font-merriweather"
+                    : "text-[18px] font-merriweather font-semibold text-[#131313]"
+                }
                 to={"/register"}
               >
                 Register
@@ -76,7 +96,7 @@ const Navbar = () => {
           </div>
           <button
             onClick={() => navigate("/")}
-            className="text-[22px] font-merriweather text-[#131313] font-extrabold"
+            className="text-[18px] md:text-[22px] font-merriweather text-[#131313] font-extrabold"
           >
             DreamHouse
           </button>
@@ -164,7 +184,7 @@ const Navbar = () => {
               </div>
               <button
                 onClick={handleLogout}
-                className="bg-[#ee4040] text-white text-[18px] font-merriweather font-semibold px-[35px] py-[10px] rounded-lg"
+                className="bg-[#ee4040] text-white  text-[14px] md:text-[18px] font-merriweather font-semibold px-[20px] md:px-[35px] py-[10px] rounded-lg"
               >
                 Log out
               </button>
@@ -172,7 +192,7 @@ const Navbar = () => {
           ) : (
             <button
               onClick={() => navigate("/login")}
-              className="bg-[#425CEC] text-white text-[18px] font-merriweather font-semibold px-[35px] py-[10px] rounded-lg"
+              className="bg-[#425CEC] text-white text-[14px] md:text-[18px] font-merriweather font-semibold px-[20px] md:px-[35px] py-[10px] rounded-lg"
             >
               Login
             </button>

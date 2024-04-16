@@ -28,11 +28,11 @@ const UpdateProfile = () => {
   };
   console.log(user);
   return (
-    <div className="container mx-auto mt-[100px] w-[50%] p-[60px] border rounded-lg">
+    <div className="container mx-auto mt-[100px] w-[100%] lg:w-[50%] p-[10px] md:p-[60px] border rounded-lg">
       <Helmet>
         <title>Update Profile</title>
       </Helmet>
-      <h2 className="text-[40px] text-center text-blue-600 font-merriweather mb-6">
+      <h2 className="text-[30px] md:text-[40px] text-center text-blue-600 font-merriweather mb-6">
         Welcome,{user.displayName}
       </h2>
       <form onSubmit={handleSubmit(onSubmit)} className="space-y-[20px]">

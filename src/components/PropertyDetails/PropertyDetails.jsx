@@ -14,7 +14,7 @@ const PropertyDetails = () => {
       <Helmet>
         <title>Property Details of id {id}</title>
       </Helmet>
-      <div className="grid grid-cols-2 gap-6 items-center">
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 items-center m-3">
         <div>
           <img src={selectedProperty.image} alt="" className="rounded-lg" />
         </div>

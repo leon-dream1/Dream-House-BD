@@ -47,7 +47,7 @@ const Register = () => {
     setPasswordType("password");
   };
   return (
-    <div className="w-[30%] mx-auto mt-[100px] p-[60px] border rounded-lg">
+    <div className="w-[100%] lg:w-[30%] md:mx-auto mt-[50px] md:mt-[100px] p-[20px] md:p-[60px] border rounded-lg">
       <Helmet>
         <title>Register</title>
       </Helmet>

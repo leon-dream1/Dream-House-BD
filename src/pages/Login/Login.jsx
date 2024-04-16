@@ -5,8 +5,7 @@ import { AuthContext } from "../../Provider/ContextProvider";
 import { toast } from "react-toastify";
 import { FaGoogle } from "react-icons/fa";
 import { FaFacebook } from "react-icons/fa";
-import {Helmet} from "react-helmet";
-
+import { Helmet } from "react-helmet";
 
 const Login = () => {
   const navigate = useNavigate();
@@ -29,7 +28,7 @@ const Login = () => {
           email: "",
           password: "",
         });
-        navigate(location.state ? location.state : '/');
+        navigate(location.state ? location.state : "/");
       })
       .catch((error) => {
         console.log(error.code);
@@ -43,7 +42,7 @@ const Login = () => {
       // eslint-disable-next-line no-unused-vars
       .then((result) => {
         toast.success("Log in successfully.........");
-        navigate(location.state ? location.state : '/');
+        navigate(location.state ? location.state : "/");
       })
       .catch((err) => {
         console.log(err);
@@ -55,7 +54,7 @@ const Login = () => {
       // eslint-disable-next-line no-unused-vars
       .then((result) => {
         toast.success("Log in successfully.........");
-        navigate(location.state ? location.state : '/');
+        navigate(location.state ? location.state : "/");
       })
       .catch((err) => {
         console.log(err);
@@ -63,7 +62,7 @@ const Login = () => {
   };
 
   return (
-    <div className="w-[30%] mx-auto mt-[100px] p-[60px] border rounded-lg">
+    <div className="w-[100%] lg:w-[30%] md:mx-auto mt-[50px] md:mt-[100px] p-[20px] md:p-[60px] border rounded-lg">
       <Helmet>
         <title>Login</title>
       </Helmet>
@@ -111,16 +110,16 @@ const Login = () => {
       </div>
       <div
         onClick={handleGoogleLogIn}
-        className="mt-10 flex items-center bg-[#425CEC] text-white text-[18px] font-semibold font-merriweather cursor-pointer space-x-10 py-2 rounded-lg"
+        className="mt-10 flex items-center bg-[#425CEC] text-white text-[18px] font-semibold font-merriweather cursor-pointer space-x-4  lg:space-x-10 py-2 rounded-lg justify-start md:justify-center lg:justify-start"
       >
-        <FaGoogle size={24} className="ml-[70px]" />
+        <FaGoogle size={24} className="ml-[30px] lg:ml-[70px]" />
         <button>Continue With Google</button>
       </div>
       <div
         onClick={handleFacebookLogIn}
-        className="mt-5 flex items-center bg-[#425CEC] text-white text-[18px] font-semibold font-merriweather cursor-pointer space-x-10 py-2 rounded-lg"
+        className="mt-5 flex items-center bg-[#425CEC] text-white text-[18px] font-semibold font-merriweather cursor-pointer space-x-4 lg:space-x-10 py-2 rounded-lg justify-start md:justify-center lg:justify-start"
       >
-        <FaFacebook size={24} className="ml-[70px]" />
+        <FaFacebook size={24} className="ml-[30px] lg:ml-[70px]" />
         <button>Continue With FaceBook</button>
       </div>
     </div>
