@@ -10,7 +10,7 @@ import {
 } from "firebase/auth";
 import { createContext, useEffect, useState } from "react";
 import auth from "../Firebase/Firebase";
-import { toast } from "react-toastify";
+// import { toast } from "react-toastify";
 
 export const AuthContext = createContext(null);
 

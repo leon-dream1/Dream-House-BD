@@ -1,13 +1,14 @@
 import { initializeApp } from "firebase/app";
 import { getAuth } from "firebase/auth";
 
+console.log("De", import.meta.env.VITE_API_KEY);
 const firebaseConfig = {
-  apiKey: "AIzaSyABZzFuGxF4zpKa4ilbktalSrWXz8vXzM0",
-  authDomain: "dream-house-bd-6c1a2.firebaseapp.com",
-  projectId: "dream-house-bd-6c1a2",
-  storageBucket: "dream-house-bd-6c1a2.appspot.com",
-  messagingSenderId: "884531710499",
-  appId: "1:884531710499:web:020e3b8c5644c8b66f7f96"
+  apiKey: import.meta.env.VITE_API_KEY,
+  authDomain: import.meta.env.VITE_AUTH_DOMAIN,
+  projectId: import.meta.env.VITE_PROJECT_ID,
+  storageBucket: import.meta.env.VITE_STORAGE_BUCKET,
+  messagingSenderId: import.meta.env.VITE_MESSAGING_SENDER_ID,
+  appId: import.meta.env.VITE_APP_ID,
 };
 
 // Initialize Firebase
