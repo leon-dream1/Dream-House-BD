@@ -4,10 +4,10 @@ export default {
   theme: {
     extend: {
       backgroundImage: {
-        "image-1": "url('./src/assets/images/1.jpg')",
-        "image-5": "url('./src/assets/images/5.jpg')",
-        "image-3": "url('./src/assets/images/3.jpg')",
-        "image-8": "url('./src/assets/images/8.jpg')",
+        "image-1": "url('./src/assets/images/banner1.jpg')",
+        "image-5": "url('./src/assets/images/banner5.jpg')",
+        "image-3": "url('./src/assets/images/banner3.jpg')",
+        "image-8": "url('./src/assets/images/banner8.jpg')",
       },
     },
     fontFamily: {
