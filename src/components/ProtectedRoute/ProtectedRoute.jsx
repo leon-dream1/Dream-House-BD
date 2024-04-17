@@ -8,11 +8,13 @@ const ProtectedRoute = ({ children }) => {
   const { user, loading } = useContext(AuthContext);
   const location = useLocation();
 
-  if (loading) {
-    return <FadeLoader color="#36d7b7" className="mx-auto mt-[50px]" />;
-  } else if (user) {
+  if (user) {
     return children;
   }
+  if (loading) {
+    return <FadeLoader color="#36d7b7" className="mx-auto mt-[50px]" />;
+  }
+
   return <Navigate to="/login" state={location.pathname} replace></Navigate>;
 };
 

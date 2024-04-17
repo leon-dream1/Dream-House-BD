@@ -38,7 +38,7 @@ const ContextProvider = ({ children }) => {
   };
 
   const logOut = () => {
-    setLoading(true);
+    // setLoading(true);
     return signOut(auth);
   };
 
@@ -56,10 +56,8 @@ const ContextProvider = ({ children }) => {
 
   useEffect(() => {
     const unSubscribe = onAuthStateChanged(auth, (currentUser) => {
-      if (currentUser) {
-        setUser(currentUser);
-        setLoading(false);
-      }
+      setUser(currentUser);
+      setLoading(false);
     });
     return () => {
       unSubscribe();
@@ -76,7 +74,7 @@ const ContextProvider = ({ children }) => {
     googleLogin,
     facebookLogin,
     loading,
-    setLoading
+    setLoading,
   };
   console.log(user);
 
