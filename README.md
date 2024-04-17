@@ -19,7 +19,6 @@ Website URL: https://dream-house-bd-6c1a2.web.app/
 - Map to see your Location
 - Update Profile
 - Animation
-- 
 
 # npm package is used
 - Animate.css
