@@ -7,17 +7,13 @@ import { FadeLoader } from "react-spinners";
 const ProtectedRoute = ({ children }) => {
   const { user, loading } = useContext(AuthContext);
   const location = useLocation();
-  console.log("user", user);
-  console.log(location);
-  console.log("loading", loading);
 
   if (loading) {
     return <FadeLoader color="#36d7b7" className="mx-auto mt-[50px]" />;
-  }
-  if (user) {
+  } else if (user) {
     return children;
   }
-  return <Navigate to="/login" state={location.pathname}></Navigate>;
+  return <Navigate to="/login" state={location.pathname} replace></Navigate>;
 };
 
 export default ProtectedRoute;

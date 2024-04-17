@@ -3,7 +3,7 @@ const Banner = () => {
     <div className="carousel w-full h-[500px] md:h-[700px] lg::h-[900px]">
       <div
         id="slide1"
-        className="carousel-item relative w-full bg-image-1 bg-cover bg-no-repeat"
+        className="carousel-item relative w-full bg-[url('./src/assets/images/1.jpg')] bg-cover bg-no-repeat"
       >
         {/* <img src={image1} className="w-full object-cover" /> */}
         <div className="w-[100%] md:w-[60%] md:mx-auto flex items-center text-center p-2">
@@ -31,7 +31,7 @@ const Banner = () => {
       </div>
       <div
         id="slide2"
-        className="carousel-item relative w-full bg-image-5 bg-no-repeat bg-cover"
+        className="carousel-item relative w-full bg-[url('./src/assets/images/5.jpg')]  bg-no-repeat bg-cover"
       >
         {/* <img src={image1} className="w-full object-cover" /> */}
         <div className="w-[100%] md:w-[60%] md:mx-auto flex items-center text-center p-2">
@@ -58,7 +58,7 @@ const Banner = () => {
       </div>
       <div
         id="slide3"
-        className="carousel-item relative w-full bg-image-3 bg-cover bg-no-repeat"
+        className="carousel-item relative w-full bg-[url('./src/assets/images/3.jpg')]  bg-cover bg-no-repeat"
       >
         {/* <img src={image1} className="w-full object-cover" /> */}
         <div className="w-[100%] md:w-[60%] md:mx-auto flex items-center text-center p-2">
@@ -86,7 +86,7 @@ const Banner = () => {
       </div>
       <div
         id="slide4"
-        className="carousel-item relative w-full bg-image-8 bg-cover bg-no-repeat"
+        className="carousel-item relative w-full bg-[url('./src/assets/images/8.jpg')]  bg-cover bg-no-repeat"
       >
         {/* <img src={image1} className="w-full object-cover" /> */}
         <div className="w-[100%] md:w-[60%] md:mx-auto flex items-center text-center p-2">
